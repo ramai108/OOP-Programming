@@ -1,0 +1,14 @@
+StrawBerries pack        10.8€
+Spaghetti Gluten Free    3.6€
+Bananas                  9.0€
+Water x 6 Pack           3.21€
+Baghette Bread           3.0€
+Water Melon              10.0€
+Oranges                  12.0€
+Olive Oil                11.8€
+Basmati Rice             6.2€
+Red Apple                4.199999999999999€
+
+Total Amount: 73.81
+Amount Given: 100.0
+Change: 26.189999999999998
