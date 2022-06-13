@@ -33,7 +33,6 @@ class Y extends X {
     }
 
     private void clone (int k) {
-
     }
 }
 
