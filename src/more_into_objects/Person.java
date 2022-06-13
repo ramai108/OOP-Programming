@@ -1,7 +1,6 @@
 package more_into_objects;
 
 public class Person {
-
     private String name;
     private int age;
 
@@ -16,7 +15,5 @@ public class Person {
 
         Person p1 = new Person("Ramai",25);
         Person p2 = new Person("Visti",40);
-
-
     }
 }
