@@ -14,37 +14,29 @@ public class Filter {
 
     public List<Integer> lessThanK (Integer k) {
         List<Integer> less = new ArrayList<Integer>();
-        for (Integer item : numsequence) {
-            if (item <= k)
-                less.add(item);
-        }
+        for (Integer item : numsequence)
+            if (item <= k) less.add(item);
         return less;
     }
 
     public List<Integer> greaterThanK (Integer k) {
         List<Integer> greater = new ArrayList<Integer>();
-        for (Integer item : numsequence) {
-            if (item >= k)
-                greater.add(item);
-        }
+        for (Integer item : numsequence)
+            if (item >= k) greater.add(item);
         return greater;
     }
 
     public List<Integer> applyFilter (Integer n) {
         List<Integer> f = new ArrayList<Integer>();
-        for (Integer number : numsequence) {
-            if (number != n)
-                f.add(number);
-        }
+        for (Integer number : numsequence)
+            if (number != n) f.add(number);
         return f;
     }
 
     public List<Integer> applyFilter(List<Integer> many) {
         List<Integer> g = new ArrayList<Integer>();
-        for (Integer number: numsequence) {
-            if (!many.contains(number))
-                g.add(number);
-        }
+        for (Integer number: numsequence)
+            if (!many.contains(number)) g.add(number);
         return g;
     }
 
