@@ -1,4 +1,4 @@
-package Inheritance.exercises;
+package Inheritance.exercises.numbers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
