@@ -90,8 +90,11 @@ public class BankAccount {
         o1.recharge(1500.0,a1);
         o1.transferToAccount(a1,a3,453.15);
         o1.getCurrentBalance(a1);
-        o1.withdraw(40000.0,a1);
-        o1.recharge(74450.0,a1);
+        o1.withdraw(40.0,a1);
+        o1.recharge(7450.0,a1);
+        o1.getCurrentBalance(a1);
+        o1.transferToAccount(a1,a7,350.0);
+        o1.transferToAccount(a1,a5,285.50);
         o1.getCurrentBalance(a1);
         saveLog(o1);
     }

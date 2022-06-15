@@ -5,6 +5,9 @@ Ramai has withdrawn 500.0 euros
 Ramai as added 1500.0euros to his Bank Account 
 Ramai has sent 453.15 euros to Michele
 Ramai 's current balance is 9346.95
-Ramai has failed in attempting to withdraw 40000.0 euros 
-Ramai as added 74450.0euros to his Bank Account 
-Ramai 's current balance is 83796.95
+Ramai has withdrawn 40.0 euros 
+Ramai as added 7450.0euros to his Bank Account 
+Ramai 's current balance is 16756.95
+Ramai has sent 350.0 euros to Erica
+Ramai has sent 285.5 euros to Visti
+Ramai 's current balance is 16121.45
