@@ -96,6 +96,8 @@ public class BankAccount {
         o1.transferToAccount(a1,a7,350.0);
         o1.transferToAccount(a1,a5,285.50);
         o1.getCurrentBalance(a1);
+        o1.getCurrentBalance(a7);
         saveLog(o1);
+
     }
 }
