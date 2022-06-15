@@ -23,6 +23,14 @@ public class VendingMachine {
         return balance;
     }
 
+    public Double getCurrentBalance() {
+        Double c =  0.0;
+        for (Product item : products) {
+            c += item.getPrice();
+        }
+        return c;
+    }
+
     public Double getChange () {
         Double c =  0.0;
         for (Product item : products) {
@@ -49,10 +57,6 @@ public class VendingMachine {
         vm.load(p1,p2,p3);
         System.out.println(vm.getProduct(3));
         System.out.println(vm.getChange());
-        System.out.println(vm.getBalance());
-
-
+        System.out.println(vm.getCurrentBalance());
     }
-
-
 }
