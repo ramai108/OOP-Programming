@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Character extends Entity{
+public class Characters extends Entity{
 
     private String name;
     private int speed;
@@ -9,7 +9,7 @@ public class Character extends Entity{
         RIGHT,LEFT,UPWARD,DOWNWARD
     }
 
-    public Character (int x, int y, String name, int speed) {
+    public Characters(int x, int y, String name, int speed) {
         super(x,y);
         this.name = name;
         this.speed = speed;
