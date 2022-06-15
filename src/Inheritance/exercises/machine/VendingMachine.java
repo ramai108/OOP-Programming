@@ -1,10 +1,12 @@
 package Inheritance.exercises.machine;
+
+import java.io.CharArrayWriter;
+
 public class VendingMachine {
 
     private Integer productsNumber;
     private Product [] products;
     private Double balance;
-
     private Double change;
 
     public VendingMachine (Integer productsNumber, Double balance) {
@@ -49,12 +51,13 @@ public class VendingMachine {
 
     public static void main(String[] args) {
 
-        VendingMachine vm = new VendingMachine(5,8.0);
+        VendingMachine vm = new VendingMachine(5,15.0);
         Product p1 = new WaterBottle(1,1.3,"Santana Water");
         Product p2 = new ChocolateBar(2,0.78,"Negrita C");
         Product p3 = new WaterBottle(3,1.5,"2L pure water");
+        Product p4 = new ChewingGum(4,4.5,"Trident");
 
-        vm.load(p1,p2,p3);
+        vm.load(p1,p2,p3,p4);
         System.out.println(vm.getProduct(3));
         System.out.println(vm.getChange());
         System.out.println(vm.getCurrentBalance());
