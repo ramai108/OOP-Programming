@@ -9,8 +9,7 @@ public class Test {
     }
 
     public static void main(String[] args) {
-
-/*        Object o = new Test();
+/*      Object o = new Test();
         Test t = new Test();
         t.toString();
         o.toString();
