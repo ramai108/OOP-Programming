@@ -33,7 +33,5 @@ public class Point {
         System.out.println(p1.equals(p3));
         System.out.println(p1.equals(o));
         System.out.println(p2.equals(p3));
-
     }
-
 }
