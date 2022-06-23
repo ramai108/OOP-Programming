@@ -18,8 +18,9 @@ public class Point {
                 '}';
     }
     public boolean equals (Object o) {
-        if (o == null) return false;
-        return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point p = (Point)o;
+        return p.x == x && p.y == y;
     }
 
     public static void main(String[] args) {

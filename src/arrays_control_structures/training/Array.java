@@ -1,8 +1,16 @@
 package arrays_control_structures.training;
 
+import java.util.ArrayList;
+
 public class Array {
 
     public static void main (String [] args) {
+
+        int [][] matrix = {{1,5},{2,4}};
+        matrix.clone();
+
+        ArrayList<Integer> a1 = new ArrayList<>();
+        for (int k : a1) System.out.println(k);
         int k;
         Array a = new Array();
         int [] arrayOfIntegers = new int[10];
