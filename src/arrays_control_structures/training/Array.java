@@ -10,6 +10,8 @@ public class Array {
         matrix.clone();
 
         ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(2);
+
         for (int k : a1) System.out.println(k);
         int k;
         Array a = new Array();
