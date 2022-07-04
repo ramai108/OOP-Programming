@@ -25,8 +25,9 @@ public class TicTacToe {
     public void setBethawin(boolean bethawin) {
         this.bethawin = bethawin;
     }
-
-    public TicTacToe () {}
+    public void setOutput(String output) {
+        this.output = output;
+    }
 
     public void fillBoard(int option, int y, int x ) {
         if (option == 1)
@@ -48,12 +49,14 @@ public class TicTacToe {
         return empty;
     }
 
-    public void showCurrentGame() {
+    public String showCurrentGame() {
         for (String [] row : chessboard) {
-            for (String item : row ) output += item + " || ";
+            for (String item : row ) {
+                output += item + " || ";
+            }
             output += "\n";
         }
-        System.out.println(output);
+        return output;
     }
 
     private String [][] trasposed () {
@@ -76,10 +79,9 @@ public class TicTacToe {
                 if (row[0].equals(alpha))  {
                     setAlphawin(true);
                 }
-                else if (row[0].equals(betha)) {
-                    setBethawin(true);
+                else {
+                    return true;
                 }
-                return true;
             }
         }
         return false;
@@ -88,7 +90,6 @@ public class TicTacToe {
     private boolean checkrows(String [][] m) {
         for (String [] row : m) {
             if (Arrays.stream(row).distinct().count() == 1){
-
                 if (row[0] == null) {
                     return false;
                 }
@@ -140,7 +141,7 @@ public class TicTacToe {
 
         System.out.println("Hi, its time to get started");
 
-        while (!(tao.isfull() &&(tao.winner()))) {
+        while (!tao.isfull() && tao.winner()) {
             System.out.println("Press 1 or 2 in order to play with either O or X");
             symbol = sc.nextInt();
             System.out.println();
@@ -153,7 +154,8 @@ public class TicTacToe {
             int y = tao.showEmptyCells().get(cell).get(0);
             int x = tao.showEmptyCells().get(cell).get(1);
             tao.fillBoard(symbol,y,x);
-            tao.showCurrentGame();
+
+            System.out.println(tao.showCurrentGame());
         }
     }
 }
