@@ -3,10 +3,9 @@ import java.util.*;
 
 public class TicTacToe {
 
-    private String [][] chessboard = new String [3][3];
-    private String alpha = "O";
-    private String betha = "X";
-    private String output = "";
+    private String [][] chessboard = {{"   ", "   ","   "},{"   ", "   ", "   "},{"   ", "   ", "   "}};
+    private String alpha = " O ";
+    private String betha = " X ";
     private boolean alphawin = false;
     private boolean bethawin = false;
 
@@ -25,9 +24,6 @@ public class TicTacToe {
     public void setBethawin(boolean bethawin) {
         this.bethawin = bethawin;
     }
-    public void setOutput(String output) {
-        this.output = output;
-    }
 
     public void fillBoard(int option, int y, int x ) {
         if (option == 1)
@@ -40,7 +36,7 @@ public class TicTacToe {
         Map<Integer,List<Integer>> empty = new HashMap<Integer,List<Integer>>();
         for (int y = 0; y < chessboard.length; y++) {
             for (int x = 0; x < chessboard[y].length; x++) {
-                if (chessboard[y][x] == null) {
+                if (chessboard[y][x].equals("   ")) {
                     empty.put(index, Arrays.asList(y,x));
                     index++;
                 }
@@ -50,9 +46,15 @@ public class TicTacToe {
     }
 
     public String showCurrentGame() {
-        for (String [] row : chessboard) {
-            for (String item : row ) {
-                output += item + " || ";
+        String output = "";
+        for (int y = 0; y < chessboard.length; y++) {
+            for (int x = 0; x < chessboard[y].length; x++) {
+                if (x < 2) {
+                    output += chessboard[y][x] + "||";
+                }
+                else {
+                    output += chessboard[y][x];
+                }
             }
             output += "\n";
         }
@@ -72,16 +74,16 @@ public class TicTacToe {
     private boolean checkrows() {
         for (String [] row : chessboard) {
             if (Arrays.stream(row).distinct().count() == 1){
-                if (row[0] == null) {
+                if (row[0].equals("   ")) {
                     return false;
                 }
-
                 if (row[0].equals(alpha))  {
                     setAlphawin(true);
                 }
-                else {
-                    return true;
+                else if (row[0].equals(betha)) {
+                    setBethawin(true);
                 }
+                return true;
             }
         }
         return false;
@@ -90,10 +92,9 @@ public class TicTacToe {
     private boolean checkrows(String [][] m) {
         for (String [] row : m) {
             if (Arrays.stream(row).distinct().count() == 1){
-                if (row[0] == null) {
+                if (row[0].equals("   ")) {
                     return false;
                 }
-
                 if (row[0].equals(alpha))  {
                     setAlphawin(true);
                 }
@@ -121,7 +122,7 @@ public class TicTacToe {
     public boolean isfull () {
         for (int y = 0; y < chessboard.length; y++) {
             for (int x = 0; x < chessboard[y].length; x++) {
-                if (chessboard[y][x] == null)
+                if (chessboard[y][x].equals("   "))
                     return false;
             }
         }
